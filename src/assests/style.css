@@ -1,0 +1,140 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100dvh;
+  line-height: 1.5;
+  /* font-family: var(--font-style);
+  color: var(--font-color); */
+  font-size: 1rem;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+:root {
+  --font-color: rgba(10, 10, 7, 0.6);
+  --font-style: sans-serif;
+}
+
+a:hover, .mobile-nav-icon:hover {
+    cursor: pointer;
+}
+
+.header {
+    max-width: 100dvw;
+    max-height: 20dvw;
+    display: flex;
+    background-color: grey;
+    justify-content: space-between;
+    font-weight: bolder;
+    font-family: var(--font-style);
+    color: var(bold --font-color);
+}
+
+.header-logo {
+    max-height: 150px;
+    max-width: 150px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    margin-left: -2em;
+}
+
+.desktop-header-right {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.mobile-header-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-nav-icon, .mobile-nav-close {
+    margin: 1em;
+    padding: 0.6em 0.25em 0.6em 0.25em;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.mobile-nav {
+    min-height: 100dvh;
+    max-width: 60dvw;
+    background-color: bisque;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    visibility: hidden;
+}
+
+.mobile-nav-animation {
+    animation: slide-in 1000ms;
+}
+
+.active {
+    text-decoration: 2px underline;
+}
+  
+.mobile-nav > a:first-child {
+    margin-top: 3rem;
+}
+
+@keyframes slide-in {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
