@@ -108,13 +108,15 @@ a:hover, .mobile-nav-icon:hover {
 
 .mobile-nav {
     min-height: 100dvh;
-    max-width: 60dvw;
+    min-width: 60dvw;
     background-color: bisque;
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
     gap: 5rem;
+    position: absolute;
+    right:0;
     visibility: hidden;
 }
 
