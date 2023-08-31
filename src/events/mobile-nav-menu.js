@@ -12,18 +12,28 @@ function buildMobileNavLinks() {
   mobileNavEvents(mobileNav);
 }
 
-export default function buildMobileNavIcon() {
+function checkIfMobileNavExists() {
   const mobileHeader = document.querySelector('.mobile-header-right');
-  // if mobile nav exists when being called be a resize event, just return
-  if (mobileHeader) return;
+  if (mobileHeader) return true;
 
-  const headerDiv = document.querySelector('.header');
+  return false;
+}
 
+function checkIfDesktopHeaderExists(headerDiv) {
   const desktopHeader = document.querySelector('.desktop-header-right');
-  // if desktop header exists while resizing window, remove from window
   if (desktopHeader) {
     headerDiv.removeChild(desktopHeader);
   }
+}
+
+export default function buildMobileNavIcon() {
+  // if mobile nav exists when being called by a resize event, just return
+  const headerCheck = checkIfMobileNavExists();
+  if (headerCheck) return;
+
+  const headerDiv = document.querySelector('.header');
+  // if desktop header exists while resizing window, remove from window
+  checkIfDesktopHeaderExists(headerDiv);
 
   const headerRight = document.createElement('div');
   headerRight.classList.add('mobile-header-right');
