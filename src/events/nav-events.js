@@ -45,10 +45,11 @@ export default function mobileNavEvents(mobileNav) {
 
   if (mobileHeaderRight) {
     mobileHeaderRight.addEventListener('click', () => {
-      // if visible and bars are clicked, hide nav menu
+      // if visible and X is clicked, hide nav menu
       if (mobileNavDisplay.style.visibility === 'visible') {
         mobileNavDisplay.style.visibility = 'hidden';
         mobileNavDisplay.classList.remove('mobile-nav-animation');
+
         // change X icon back to mobile nav bars
         const mobileNavCloseIcon = document.querySelector('.mobile-nav-close');
         mobileNavCloseIcon.removeAttribute('class');
