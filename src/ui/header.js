@@ -1,6 +1,7 @@
 import test from '../assests/images/gulf-haven-logo.png';
 import buildDesktopNavMenu from '../events/desktop-nav-menu';
 import buildMobileNav from '../events/mobile-nav-menu';
+import mobileNavEvents, { navEvents } from '../events/nav-events';
 
 // runs on load to determine if we load a desktop or mobile view
 function checkScreenSize() {
@@ -11,7 +12,12 @@ function checkScreenSize() {
   // if screen size less than or equal to phone sizes
   if (windowHeight <= 926 && windowWidth <= 600) {
     buildMobileNav();
-  } else buildDesktopNavMenu();
+    mobileNavEvents();
+    navEvents();
+  } else {
+    buildDesktopNavMenu();
+    navEvents();
+  }
 }
 
 export default function createHeader() {
