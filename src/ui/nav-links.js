@@ -2,6 +2,7 @@ export default function buildNavLinks(element) {
   const homeLink = document.createElement('a');
   homeLink.classList.add('home-link');
   homeLink.classList.add('link-item');
+  // we want home to be the page the site opens up to
   homeLink.classList.add('active');
   homeLink.textContent = 'Home';
   element.appendChild(homeLink);
