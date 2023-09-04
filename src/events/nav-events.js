@@ -4,8 +4,9 @@ import {
 } from '../ui/active-attribute';
 import loadAboutPage from '../ui/pages/about';
 import loadContactPage from '../ui/pages/contact';
-import loadHomePage from '../ui/pages/home';
 import loadServicesPage from '../ui/pages/services';
+import wipeDomContent from '../ui/dom';
+import loadHomePage from '../ui/pages/home';
 
 function checkWhichSidebarLinkIsClicked(e) {
   switch (e.target.textContent) {
@@ -32,15 +33,15 @@ function navEvents() {
   navLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
       checkForActiveAttribute(navLinks);
-      //   wipeDomContent();
+      wipeDomContent();
       addActiveAttribute(e);
       checkWhichSidebarLinkIsClicked(e);
     });
   });
 }
 
-export default function mobileNavEvents(mobileNav) {
-  const mobileNavDisplay = mobileNav;
+export default function mobileNavEvents() {
+  const mobileNavDisplay = document.querySelector('.mobile-nav');
   const mobileHeaderRight = document.querySelector('.mobile-header-right');
 
   if (mobileHeaderRight) {
@@ -63,7 +64,7 @@ export default function mobileNavEvents(mobileNav) {
         mobileNavBarIcon.removeAttribute('class');
         mobileNavBarIcon.setAttribute('class', 'fa-solid fa-x fa-xl');
         mobileNavBarIcon.classList.add('mobile-nav-close');
-        navEvents();
+        // navEvents();
       }
     });
   }
