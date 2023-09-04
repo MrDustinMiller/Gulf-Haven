@@ -1,6 +1,6 @@
-import test from '../assests/images/gulf-haven-logo.png';
-import buildDesktopNavMenu from '../events/desktop-nav-menu';
-import buildMobileNav from '../events/mobile-nav-menu';
+// import test from '../assests/images/gulf-haven-logo.png';
+import buildDesktopNavMenu from './desktop-nav-menu';
+import buildMobileNav from './mobile-nav-menu';
 import mobileNavEvents, { navEvents } from '../events/nav-events';
 
 // runs on load to determine if we load a desktop or mobile view
@@ -9,8 +9,8 @@ function checkScreenSize() {
   const windowHeight = window.screen.height;
   const windowWidth = window.screen.width;
 
-  // if screen size less than or equal to phone sizes
-  if (windowHeight <= 926 && windowWidth <= 600) {
+  // if screen size less than or equal to phone sizes & ipad
+  if (windowHeight <= 1080 && windowWidth <= 810) {
     buildMobileNav();
     mobileNavEvents();
     navEvents();
@@ -31,13 +31,19 @@ export default function createHeader() {
   headerLeft.classList.add('header-left');
   headerDiv.appendChild(headerLeft);
 
-  const headerLogo = document.createElement('img');
-  headerLogo.classList.add('header-logo');
-  headerLogo.src = test;
-  headerLeft.appendChild(headerLogo);
+  const rvLogo = document.createElement('i');
+  rvLogo.setAttribute('class', 'fa-solid fa-caravan fa-xl');
+  rvLogo.classList.add('header-logo');
+  headerLeft.appendChild(rvLogo);
+
+  // const headerLogo = document.createElement('img');
+  // headerLogo.classList.add('header-logo');
+  // headerLogo.src = test;
+  // headerLeft.appendChild(headerLogo);
 
   const headerLogoText = document.createElement('p');
-  headerLogoText.textContent = 'Gulf Haven Resort';
+  headerLogoText.classList.add('header-logo-text');
+  headerLogoText.textContent = 'GULF HAVEN RV';
   headerLeft.appendChild(headerLogoText);
 
   checkScreenSize();
