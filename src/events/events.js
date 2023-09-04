@@ -1,5 +1,5 @@
-import buildMobileNav from './mobile-nav-menu';
-import buildDesktopNavMenu from './desktop-nav-menu';
+import buildMobileNav from '../ui/mobile-nav-menu';
+import buildDesktopNavMenu from '../ui/desktop-nav-menu';
 
 // runs when screen size is adjusted to see if we need to update display or not
 export default function checkScreenSizeAdjustment() {
