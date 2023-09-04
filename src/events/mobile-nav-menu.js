@@ -1,5 +1,4 @@
 import buildNavLinks from '../ui/nav-links';
-import mobileNavEvents from './nav-events';
 
 function buildMobileNavLinks() {
   const body = document.querySelector('.content');
@@ -9,7 +8,6 @@ function buildMobileNavLinks() {
   body.appendChild(mobileNav);
 
   buildNavLinks(mobileNav);
-  mobileNavEvents(mobileNav);
 }
 
 function checkIfMobileNavExists() {
