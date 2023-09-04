@@ -1,4 +1,6 @@
-import mainRightBG from '../../assests/images/bg.png';
+// import mainRightBG from '../../assests/images/bg.png';
+import testBg from '../../assests/images/test.png';
+import buildSocialsDiv from '../socials';
 
 function buildHomeMainLeftDiv(homeContent) {
   const mainLeft = document.createElement('div');
@@ -12,49 +14,46 @@ function buildHomeMainLeftDiv(homeContent) {
 
   const homeTitle = document.createElement('p');
   homeTitle.classList.add('home-title');
-  homeTitle.textContent = 'ENJOY YOUR VACATION TIME';
+  homeTitle.textContent = 'ENJOY YOUR';
   titleAndWelcomeDiv.appendChild(homeTitle);
+
+  const homeTitleBottom = document.createElement('p');
+  homeTitleBottom.classList.add('home-title-bottom');
+  homeTitleBottom.textContent = 'VACATION TIME';
+  titleAndWelcomeDiv.appendChild(homeTitleBottom);
 
   const homeLeftContentHeader = document.createElement('p');
   homeLeftContentHeader.classList.add('home-content-header');
-  homeLeftContentHeader.textContent = 'LOREM IPSUM';
+  homeLeftContentHeader.textContent = 'GULF HAVEN RV RESORT';
   titleAndWelcomeDiv.appendChild(homeLeftContentHeader);
 
   const homeLeftTextContent = document.createElement('p');
   homeLeftTextContent.classList.add('home-content-text');
   homeLeftTextContent.textContent =
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+    'Located just off Highway 90 (Beach Blvd) in Gulfport Gulf Haven Campground features RV hook-ups, pull-through spaces, Wi-Fi access and cable connections at every site, palm trees, flower beds, and much more. The office houses not only the office, but the showers and restrooms. A wraparound porch equipped with rocking chairs overlooks the beautiful Gulf of Mexico!';
   titleAndWelcomeDiv.appendChild(homeLeftTextContent);
-  //----------------------------------
 
-  const socialsDiv = document.createElement('div');
-  socialsDiv.classList.add('socials-div');
-  mainLeft.appendChild(socialsDiv);
+  const callNowButton = document.createElement('button');
+  callNowButton.classList.add('call-now-btn');
+  titleAndWelcomeDiv.appendChild(callNowButton);
 
-  const socialFacebookLink = document.createElement('i');
-  socialFacebookLink.setAttribute('class', 'fa-brands fa-facebook fa-xl');
-  socialFacebookLink.classList.add('facebook-link');
-  socialsDiv.appendChild(socialFacebookLink);
+  const callNowButtonText = document.createElement('p');
+  callNowButtonText.classList.add('call-now-btn-text');
+  callNowButtonText.textContent = 'Call now to book!';
+  callNowButton.appendChild(callNowButtonText);
 
-  const socialInstagramLink = document.createElement('i');
-  socialInstagramLink.setAttribute(
-    'class',
-    'fa-brands fa-square-instagram fa-xl'
-  );
-  socialInstagramLink.classList.add('instagram-link');
-  socialsDiv.appendChild(socialInstagramLink);
+  const callBtnIcon = document.createElement('i');
+  callBtnIcon.setAttribute('class', 'fa-solid fa-phone-volume');
+  callNowButton.appendChild(callBtnIcon);
 
-  const socialGulfCoastLink = document.createElement('i');
-  socialGulfCoastLink.setAttribute('class', 'fa-solid fa-sun fa-xl');
-  socialGulfCoastLink.classList.add('ms-gulf-coast-link');
-  socialsDiv.appendChild(socialGulfCoastLink);
+  buildSocialsDiv(mainLeft);
 }
 
 function buildHomeMainRightDiv(homeContent) {
   const mainRight = document.createElement('div');
 
   mainRight.classList.add('main-right');
-  mainRight.style.backgroundImage = `url(${mainRightBG})`;
+  // mainRight.style.backgroundImage = `url(${mainRightBG})`;
   mainRight.classList.add('home-page');
   homeContent.appendChild(mainRight);
 }
@@ -64,6 +63,7 @@ function buildHomeContentDiv() {
   const homeContent = document.createElement('div');
 
   homeContent.classList.add('home-content');
+  homeContent.style.backgroundImage = `url(${testBg})`;
   main.appendChild(homeContent);
   buildHomeMainLeftDiv(homeContent);
   buildHomeMainRightDiv(homeContent);
