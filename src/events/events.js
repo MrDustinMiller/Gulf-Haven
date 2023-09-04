@@ -9,9 +9,9 @@ export default function checkScreenSizeAdjustment() {
     const windowHeight = e.target.outerHeight;
     const windowWidth = e.target.outerWidth;
 
-    if (windowHeight <= 926 && windowWidth <= 700) {
+    if (windowHeight <= 1000 && windowWidth <= 700) {
       buildMobileNav();
-    } else if (windowHeight >= 700 && windowWidth >= 800) {
+    } else if (windowHeight >= 700 && windowWidth >= 701) {
       buildDesktopNavMenu();
     }
   });
