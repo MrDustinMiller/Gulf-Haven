@@ -10,16 +10,16 @@ import loadHomePage from '../ui/pages/home';
 
 function checkWhichSidebarLinkIsClicked(e) {
   switch (e.target.textContent) {
-    case 'About':
+    case 'ABOUT':
       loadAboutPage();
       break;
-    case 'Contact':
+    case 'CONTACT':
       loadContactPage();
       break;
-    case 'Home':
+    case 'HOME':
       loadHomePage();
       break;
-    case 'Services':
+    case 'SERVICES':
       loadServicesPage();
       break;
     default:
@@ -54,7 +54,10 @@ export default function mobileNavEvents() {
         // change X icon back to mobile nav bars
         const mobileNavCloseIcon = document.querySelector('.mobile-nav-close');
         mobileNavCloseIcon.removeAttribute('class');
-        mobileNavCloseIcon.setAttribute('class', 'fa-solid fa-bars fa-xl');
+        mobileNavCloseIcon.setAttribute(
+          'class',
+          'fa-solid fa-bars-staggered fa-xl'
+        );
         mobileNavCloseIcon.classList.add('mobile-nav-icon');
       } else {
         mobileNavDisplay.style.visibility = 'visible';
@@ -64,7 +67,6 @@ export default function mobileNavEvents() {
         mobileNavBarIcon.removeAttribute('class');
         mobileNavBarIcon.setAttribute('class', 'fa-solid fa-x fa-xl');
         mobileNavBarIcon.classList.add('mobile-nav-close');
-        // navEvents();
       }
     });
   }
