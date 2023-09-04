@@ -1,5 +1,4 @@
 import buildNavLinks from '../ui/nav-links';
-import { navEvents } from './nav-events';
 
 function checkIfDesktopHeaderExists() {
   if (document.querySelector('.desktop-header-right')) return true;
@@ -32,5 +31,4 @@ export default function buildDesktopNavMenu() {
   headerDiv.appendChild(headerRight);
 
   buildNavLinks(headerRight);
-  navEvents();
 }
