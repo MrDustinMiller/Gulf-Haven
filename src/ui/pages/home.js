@@ -1,5 +1,6 @@
 // import mainRightBG from '../../assests/images/bg.png';
 import testBg from '../../assests/images/test.png';
+import buildCallToBookButton from '../call-button';
 import buildSocialsDiv from '../socials';
 
 function buildHomeMainLeftDiv(homeContent) {
@@ -33,19 +34,7 @@ function buildHomeMainLeftDiv(homeContent) {
     'Located just off Highway 90 (Beach Blvd) in Gulfport Gulf Haven Campground features RV hook-ups, pull-through spaces, Wi-Fi access and cable connections at every site, palm trees, flower beds, and much more. The office houses not only the office, but the showers and restrooms. A wraparound porch equipped with rocking chairs overlooks the beautiful Gulf of Mexico!';
   titleAndWelcomeDiv.appendChild(homeLeftTextContent);
 
-  const callNowButton = document.createElement('button');
-  callNowButton.classList.add('call-now-btn');
-  titleAndWelcomeDiv.appendChild(callNowButton);
-
-  const callNowButtonText = document.createElement('p');
-  callNowButtonText.classList.add('call-now-btn-text');
-  callNowButtonText.textContent = 'Call now to book!';
-  callNowButton.appendChild(callNowButtonText);
-
-  const callBtnIcon = document.createElement('i');
-  callBtnIcon.setAttribute('class', 'fa-solid fa-phone-volume');
-  callNowButton.appendChild(callBtnIcon);
-
+  buildCallToBookButton(titleAndWelcomeDiv);
   buildSocialsDiv(mainLeft);
 }
 
