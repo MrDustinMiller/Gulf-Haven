@@ -15,12 +15,12 @@ function buildHomeMainLeftDiv(homeContent) {
 
   const homeTitle = document.createElement('p');
   homeTitle.classList.add('home-title');
-  homeTitle.textContent = 'ENJOY YOUR';
+  homeTitle.textContent = 'BOOK A BEACH BREAK';
   titleAndWelcomeDiv.appendChild(homeTitle);
 
   const homeTitleBottom = document.createElement('p');
   homeTitleBottom.classList.add('home-title-bottom');
-  homeTitleBottom.textContent = 'VACATION TIME';
+  homeTitleBottom.textContent = 'COME STOP BY!';
   titleAndWelcomeDiv.appendChild(homeTitleBottom);
 
   const homeLeftContentHeader = document.createElement('p');
