@@ -301,12 +301,13 @@ i:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 1rem;
+    padding: 0.5rem; 
     word-break: break-word;
     /* if bg stays same */
     background-position: top;
     background-size: 54%;
-    max-height: 100dvh;
+    /* max-height: 100dvh; */
+    /* background-attachment: fixed; */
   }
 
   .home-welcome-div {
@@ -330,10 +331,13 @@ i:hover {
   .header {
     padding: 0rem;
     max-height: 9dvh;
+    position: sticky;
+    background-color: #fff7ed;
+    top: 0;
   }
 
   .socials-div {
-    /* visibility: hidden; */
+    visibility: hidden;
     padding: 0rem;
     margin: 0;
     -webkit-box-pack: space-evenly;
