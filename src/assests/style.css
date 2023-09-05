@@ -281,7 +281,7 @@ i:hover {
   -webkit-transition: ease-out 0.4s;
   -o-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
-
+  color: black;
 }
 
 .call-now-btn:hover {
