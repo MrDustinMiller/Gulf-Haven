@@ -5,7 +5,7 @@ export default function buildCallToBookButton(titleAndWelcomeDiv) {
 
   const callNowButtonText = document.createElement('p');
   callNowButtonText.classList.add('call-now-btn-text');
-  callNowButtonText.textContent = 'Call now to book!';
+  callNowButtonText.textContent = 'Call now to reserve!';
   callNowButton.appendChild(callNowButtonText);
 
   const callBtnIcon = document.createElement('i');
