@@ -288,6 +288,24 @@ i:hover {
   color:white;
 }
 
+
+.about-div{
+  background-color: grey;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+.picture-div-one, .picture-div-two, .text-div-one, .text-div-two {
+  width:50dvw;
+  height:50dvh;
+  background-color: grey;
+}
+
 @media (max-width: 700px)  {
   .mobile-nav {
     height: 100dvh;
@@ -389,7 +407,13 @@ i:hover {
   .main-right {
     display: none;
   }
+
+  .picture-div-one, .picture-div-two, .text-div-one, .text-div-two { 
+    width: 100dvw;
+    height: 50dvh;
+  }
 }
+
 
 @-webkit-keyframes slide-in {
     from {
