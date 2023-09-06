@@ -7,7 +7,7 @@ export default function buildCallToBookButton(titleAndWelcomeDiv) {
   callNowButtonText.classList.add('call-now-btn-text');
   callNowButtonText.setAttribute('href', 'tel:2288639096');
   callNowButtonText.setAttribute('target', '_parent');
-  callNowButtonText.textContent = 'Call now to reserve!';
+  callNowButtonText.textContent = '228-863-9096!';
   callNowButton.appendChild(callNowButtonText);
 
   const callBtnIcon = document.createElement('i');
