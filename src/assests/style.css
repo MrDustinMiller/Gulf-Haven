@@ -293,11 +293,12 @@ i:hover {
     height: 100dvh;
     width: 100dvw;
   }
-
-  .call-now-btn:focus {
+  
+  .call-now-btn:active {
     -webkit-box-shadow: inset 400px 0 0 0 #629436;
     box-shadow: inset 400px 0 0 0 #629436;
     color:white;
+    transition: none;
   }
 
   .call-now-btn:hover {
@@ -332,6 +333,8 @@ i:hover {
 
   .call-now-btn {
     max-width: 92dvw;
+    transition: all 0.2s;
+    transition-delay: 300ms;
   }
 
   .header {
