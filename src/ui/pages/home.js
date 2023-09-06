@@ -1,4 +1,3 @@
-// import mainRightBG from '../../assests/images/bg.png';
 import testBg from '../../assests/images/test.png';
 import buildCallToBookButton from '../call-button';
 import buildSocialsDiv from '../socials';
