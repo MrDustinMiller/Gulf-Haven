@@ -280,6 +280,7 @@ i:hover {
   -o-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
   color: black;
+  transition: 0.2s all;
 }
 
 .call-now-btn:hover {
@@ -313,11 +314,12 @@ i:hover {
   }
   
   .call-now-btn:active {
-    -webkit-box-shadow: inset 400px 0 0 0 #629436;
+    /* -webkit-box-shadow: inset 400px 0 0 0 #629436;
     box-shadow: inset 400px 0 0 0 #629436;
     color:white;
-    transition: none;
-  }
+    transition: none; */
+    transform: scale(0.97);
+  } 
 
   .call-now-btn:hover {
     pointer-events: none;
