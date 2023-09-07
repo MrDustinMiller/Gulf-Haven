@@ -280,7 +280,6 @@ i:hover {
   -o-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
   color: black;
-  transition: 0.2s all;
 }
 
 .call-now-btn:hover {
