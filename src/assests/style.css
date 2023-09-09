@@ -292,7 +292,7 @@ i:hover {
 
 
 .about-div{
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .about-content {
@@ -308,7 +308,34 @@ i:hover {
 .picture-div-one, .picture-div-two, .text-div-one, .text-div-two {
   width:50dvw;
   height:50dvh;
-  background-color: grey;
+}
+
+.picture-div-one, .picture-div-two {
+  display: flex;
+  flex-wrap: wrap;
+  gap:0.5rem;
+  padding: 0.25rem;
+}
+
+.picture-div-one-child-top {
+  flex-grow: 2;
+  flex-basis: 100%;
+  background-position: bottom;
+}
+
+.picture-div-one-child-bottom-left, .picture-div-one-child-bottom-right, .picture-div-two-child-top, .picture-div-two-child-bottom-left {
+  flex-grow: 1;
+}
+
+.picture-div-child {
+  background-color: #629436;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.picture-div-two-child-bottom-right {
+  flex-grow: 1;
+  flex-basis: 100%;
 }
 
 @media (max-width: 700px)  {
