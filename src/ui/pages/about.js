@@ -1,6 +1,9 @@
-import gulfHavenSign from '../../assests/images/gulf-haven-sign.jpg';
+import frontOffice from '../../assests/images/front-office.jpg';
 import benchShot from '../../assests/images/bench-shot.jpg';
 import beachShotTwo from '../../assests/images/beach-shot-2.jpg';
+import afterKatrina from '../../assests/images/after-katrina.jpg';
+import construction from '../../assests/images/construction.jpg';
+import beach from '../../assests/images/beach.jpg';
 
 function buildPictureDivChildrenDivs(
   pictureDiv,
@@ -76,13 +79,19 @@ function buildAboutDivs() {
   buildPictureDiv(
     content,
     'picture-div-one',
-    beachShotTwo,
-    gulfHavenSign,
-    benchShot
+    beach,
+    afterKatrina,
+    construction
   );
   buildTextDiv(content, 'text-div-one', 'text-div-one-text-content');
   buildTextDiv(content, 'text-div-two', 'text-div-two-text-content');
-  buildPictureDiv(content, 'picture-div-two');
+  buildPictureDiv(
+    content,
+    'picture-div-two',
+    frontOffice,
+    benchShot,
+    beachShotTwo
+  );
 }
 
 function buildAboutContentDiv() {
