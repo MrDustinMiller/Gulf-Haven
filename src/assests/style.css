@@ -301,13 +301,14 @@ i:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 100dvh;
+  /* height: 100dvh; */
   width: 100dvw;
 }
 
 .picture-div-one, .picture-div-two, .text-div-one, .text-div-two {
   width:50dvw;
-  height:50dvh;
+  /* height:50dvh; */
+  height: 44.5dvh;
 }
 
 .picture-div-one, .picture-div-two {
@@ -320,7 +321,7 @@ i:hover {
 .picture-div-one-child-top {
   flex-grow: 2;
   flex-basis: 100%;
-  background-position: bottom;
+  background-position: center;
 }
 
 .picture-div-one-child-bottom-left, .picture-div-one-child-bottom-right, .picture-div-two-child-top, .picture-div-two-child-bottom-left {
@@ -336,6 +337,7 @@ i:hover {
 .picture-div-two-child-bottom-right {
   flex-grow: 1;
   flex-basis: 100%;
+  background-position: center;
 }
 
 @media (max-width: 700px)  {
