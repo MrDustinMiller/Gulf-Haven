@@ -1,3 +1,9 @@
+import aboutDivOneP1 from '../../assests/text-files/div-one/about-text-one-p1.txt';
+import aboutDivOneP2 from '../../assests/text-files/div-one/about-text-one-p2.txt';
+import aboutDivOneP3 from '../../assests/text-files/div-one/about-text-one-p3.txt';
+import aboutDivTwoP1 from '../../assests/text-files/div-two/about-text-two-p1.txt';
+import aboutDivTwoP2 from '../../assests/text-files/div-two/about-text-two-p2.txt';
+import aboutDivTwoP3 from '../../assests/text-files/div-two/about-text-two-p3.txt';
 import frontOffice from '../../assests/images/front-office.jpg';
 import benchShot from '../../assests/images/bench-shot.jpg';
 import beachShotTwo from '../../assests/images/beach-shot-2.jpg';
@@ -59,17 +65,37 @@ function buildPictureDiv(
   );
 }
 
-function buildTextDiv(content, textDivClassName, textContentClassName) {
+function buildTextDiv(
+  content,
+  textDivClassName,
+  textContentClassName,
+  paragraphOne,
+  paragraphTwo,
+  paragraphThree
+) {
   const textDivOne = document.createElement('div');
   textDivOne.classList.add(`${textDivClassName}`);
   textDivOne.classList.add('about-div');
 
-  const textDivOneContent = document.createElement('p');
-  textDivOneContent.classList.add(`${textContentClassName}`);
-  textDivOneContent.textContent =
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
-  // textDivOneContent.textContent = `${textContent}`
-  textDivOne.appendChild(textDivOneContent);
+  // paragraph 1
+  const paragraphOneContent = document.createElement('p');
+  paragraphOneContent.classList.add(`${textContentClassName}`);
+  paragraphOneContent.textContent = `${paragraphOne}`;
+  textDivOne.appendChild(paragraphOneContent);
+  content.appendChild(textDivOne);
+
+  // paragraph 2
+  const paragraphTwoContent = document.createElement('p');
+  paragraphTwoContent.classList.add(`${textContentClassName}`);
+  paragraphTwoContent.textContent = `${paragraphTwo}`;
+  textDivOne.appendChild(paragraphTwoContent);
+  content.appendChild(textDivOne);
+
+  // paragraph 3
+  const paragraphThreeContent = document.createElement('p');
+  paragraphThreeContent.classList.add(`${textContentClassName}`);
+  paragraphThreeContent.textContent = `${paragraphThree}`;
+  textDivOne.appendChild(paragraphThreeContent);
   content.appendChild(textDivOne);
 }
 
@@ -83,8 +109,22 @@ function buildAboutDivs() {
     afterKatrina,
     construction
   );
-  buildTextDiv(content, 'text-div-one', 'text-div-one-text-content');
-  buildTextDiv(content, 'text-div-two', 'text-div-two-text-content');
+  buildTextDiv(
+    content,
+    'text-div-one',
+    'text-div-one-text-content',
+    aboutDivOneP1,
+    aboutDivOneP2,
+    aboutDivOneP3
+  );
+  buildTextDiv(
+    content,
+    'text-div-two',
+    'text-div-two-text-content',
+    aboutDivTwoP1,
+    aboutDivTwoP2,
+    aboutDivTwoP3
+  );
   buildPictureDiv(
     content,
     'picture-div-two',
