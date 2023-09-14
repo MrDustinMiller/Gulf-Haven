@@ -71,6 +71,7 @@ select {
   --font-color: rgba(10, 10, 7, 0.6);
   --font-style: sans-serif;
   --text-block-font: 'Roboto';
+  --main-font: 'Rubik'
 }
 a {
   color: inherit;
@@ -90,7 +91,7 @@ a:hover, .mobile-nav-icon:hover {
         -ms-flex-pack: justify;
             justify-content: space-between;
     font-weight: bolder;
-    font-family: 'Rubik';
+    font-family: var(--main-font);
     color: var(bold --font-color);
     padding: 0em 2em 0em 2em;
 
@@ -234,7 +235,7 @@ i:hover {
 }
 
 .home-title, .home-content-header, .header, .home-title-bottom, .link-item {
-  font-family: 'Rubik';
+  font-family: var(--main-font);
 }
 
 .home-title {
@@ -259,7 +260,7 @@ i:hover {
   font-family: var(--text-block-font);
 }
 
-.call-now-btn {
+/* .call-now-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -271,20 +272,32 @@ i:hover {
           align-items: center;
   max-width: 21dvw;
   font-size: 1.25rem;
-  font-family: rubik;
+  font-family: var(--main-font);
   margin-top: 2rem;
   border-radius: 8px;
   border: 2px solid black;
   cursor: pointer;
   padding: 0.25rem;
   background-color: #e9d1ac;
+  
+  color: black;
+} */
+
+.call-now-btn-text {
+  font-family: var(--main-font);
+  background-color: #e9d1ac;
+  width: 21dvw;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 8px;
+  border: 2px solid black;
+  text-align: center;
+  margin-top: 1rem;
   -webkit-transition: ease-out 0.4s;
   -o-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
-  color: black;
 }
 
-.call-now-btn:hover {
+.call-now-btn-text:hover {
   -webkit-box-shadow: inset 400px 0 0 0 #629436;
           box-shadow: inset 400px 0 0 0 #629436;
   color:white;
@@ -367,14 +380,13 @@ i:hover {
     width: 100dvw;
   }
   
-  .call-now-btn:active {
+  .call-now-btn-text:active {
     -webkit-transform: scale(0.90);
         -ms-transform: scale(0.90);
             transform: scale(0.90);
   } 
 
-  .call-now-btn:hover {
-    pointer-events: none;
+  .call-now-btn-text:hover {
     -webkit-box-shadow: none;
             box-shadow: none;
     color:black;
@@ -406,11 +418,9 @@ i:hover {
     padding: 0rem;
   }
 
-  .call-now-btn {
-    max-width: 92dvw;
-    -webkit-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
+  .call-now-btn-text {
+    min-width: 96dvw;
+    margin: 0.5rem;
   }
 
   .header {
